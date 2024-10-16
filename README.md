@@ -50,6 +50,11 @@ Result:
 
 ![Screenshot 2024-10-16 100945](https://github.com/user-attachments/assets/6b01aed2-ce87-4eb5-bbf8-2022c91f0772)
 
+Madhya Pradesh, Rajasthan, and Uttar Pradesh consistently ranked among the top states with the highest number of reported rape cases in India between 2001 and 2014.
+Maharashtra also frequently appeared in the top 10.
+However, it's important to note that this analysis is limited to the reported cases. There may be unreported cases due to various factors, such as fear, stigma, and lack of trust in the legal system.
+Further analysis is necessary to understand the underlying causes of high rape rates in these states and to develop effective strategies for prevention and response.
+
 ## 2. Create a Dataset containing the 10 highest reported deaths caused by Dowry cases in India, in the span of years 2001-2014.
 - Top 10 Highest Dowry Deaths Cases
 ```mysql
@@ -63,125 +68,144 @@ Result:
 
 ![Q2](https://github.com/user-attachments/assets/d2ce1a2b-97d4-4646-bc5e-60ba27545aa2)
 
-- Bottom 10 Movies
+Uttar Pradesh consistently reported the highest number of dowry deaths in India between 2001 and 2014, accounting for all of the top 10 cases. This highlights a significant issue within the state regarding dowry-related violence.
+
+## 3. Create a dataset containing the 10 highest reported Domestic violence cases in India, in the span of years 2001-2014.
+- Top 10 Highest Domestic Violence Cases
 ```mysql
-SELECT title, 
-type, 
-imdb_score
-FROM shows_movies.titles
-WHERE type = 'MOVIE'
-ORDER BY imdb_score ASC
-LIMIT 10
+select `STATE/UT`, Year, 
+sum(`Cruelty by Husband or his Relatives`) as Domestic_Violence_Case
+from women_crime
+group by `STATE/UT`, Year
+order by sum(`Cruelty by Husband or his Relatives`) desc
+limit 10; 
+```
+Result: 
+
+![Q2](https://github.com/user-attachments/assets/d2ce1a2b-97d4-4646-bc5e-60ba27545aa2)
+
+West Bengal consistently reported the highest number of domestic violence cases between 2001 and 2014, indicating a significant prevalence of this issue within the state.
+Rajasthan and Andhra Pradesh also reported relatively high numbers of domestic violence cases.
+
+## 4. Create a Dataset containing the 10 highest reported Importation cases in India, in the span of years 2001-2014.
+- Top 10 Highest Importation Cases
+```mysql
+select `STATE/UT`, Year, 
+sum(`Importation of Girls`) as Importatio_Case
+from women_crime
+group by `STATE/UT`, Year
+order by sum(`Importation of Girls`) desc
+limit 10;
+```
+Result: 
+
+![Q2](https://github.com/user-attachments/assets/d2ce1a2b-97d4-4646-bc5e-60ba27545aa2)
+
+Bihar reported the highest number of reported cases of importation of girls between 2001 and 2014, followed by West Bengal and Jharkhand. This indicates a significant prevalence of this issue in these states.
+
+## 5. Find out the total number of cases, in the span of 2001-2014 under each category, state-wise.
+```mysql
+select  `STATE/UT`, 
+sum(Rape) as Total_Rape,sum(`Dowry Deaths`) as Total_Dowry_Death,
+sum(`Cruelty by Husband or his Relatives`) as Domestic_Violence_Case, 
+sum(`Importation of Girls`) as Importatio_Case, 
+sum(`Insult to modesty of Women`) as Modesty_Case, 
+sum(`Assault on women with intent to outrage her modesty`) as Assault_Case,
+sum(`Kidnapping and Abduction`) as Total_Kidnapping_Abduction_Case
+from women_crime
+group by `STATE/UT`
+order by  Total_Rape, Total_Dowry_Death,
+Domestic_Violence_Case, Importatio_Case,Modesty_Case,
+Assault_Case,Total_Kidnapping_Abduction_Case desc;
+```
+Result: 
+
+![Q2](https://github.com/user-attachments/assets/d2ce1a2b-97d4-4646-bc5e-60ba27545aa2)
+
+Uttar Pradesh reported the highest number of cases across all categories.
+Madhya Pradesh and West Bengal also reported high numbers of cases in most categories.
+States like Lakshdweep, Daman & Diu, and D & N Haveli reported significantly lower numbers of cases in all categories.
+
+## 6. Find out the top 5 states, where the maximum number of cases has been reported in TOTAL in the span of 2001-2014, each category-wise.
+	• For the "Rape" case 
+	• For Kidnapping and abduction case 
+	• For cases of deaths due to dowry 
+	• For Domestic Violence case 
+	• For the Importation of Girls case
+ 
+- For the "Rape" case 
+```mysql
+select `STATE/UT`,sum(Rape) as Total_Rape
+from women_crime
+group by `STATE/UT`
+order by  Total_Rape desc
+limit 5;
+```
+Result: 
+
+![Q2](https://github.com/user-attachments/assets/d2ce1a2b-97d4-4646-bc5e-60ba27545aa2)
+
+Madhya Pradesh has the highest number of reported rape cases (45,498), followed by Uttar Pradesh, Maharashtra, West Bengal, and Rajasthan. This shows that these states have a higher incidence of reported rape cases and may need stronger measures to improve women's safety.
+
+- For Kidnapping and abduction case 
+```mysql
+select `STATE/UT`,
+sum(`Kidnapping and Abduction`) as Total_Kidnapping_Abductind_Case
+from women_crime
+group by `STATE/UT`
+order by Total_Kidnapping_Abductind_Case  desc
+limit 5;  
 ```
 Result: 
 
 ![Q3](https://i.ibb.co/tMXV1yp/Screen-Shot-2023-07-09-at-9-47-24-PM.png)
 
-- Bottom 10 Shows
+Uttar Pradesh has the highest number of reported kidnapping and abduction cases (67,953), followed by Rajasthan, Assam, West Bengal, and Bihar between 2001 and 2014. This indicates that these states face significant issues related to kidnapping and abduction, which may require focused efforts to improve law enforcement and public safety measures.
+
+- For cases of deaths due to dowry 
 ```mysql
-SELECT title, 
-type, 
-imdb_score
-FROM shows_movies.titles
-WHERE type = 'SHOW'
-ORDER BY imdb_score ASC
-LIMIT 10
+select `STATE/UT`,
+sum(`Dowry Deaths`) as Total_Dowry_Case
+from women_crime
+group by `STATE/UT`
+order by  Total_Dowry_Case desc
+limit 5; 
 ```
 Result: 
 
 ![Q4](https://i.ibb.co/Y7Qjvg5/Screen-Shot-2023-07-09-at-9-49-36-PM.png)
 
-An IMDB score is a widely recognized measure of the overall quality and popularity of a movie or show. The top 10 movies and shows stood out for their exceptional 
+Uttar Pradesh reports the highest number of dowry deaths (28,628), followed by Bihar, Madhya Pradesh, Andhra Pradesh, and West Bengal between 2001 and 2014. These states show a severe issue with dowry-related violence, highlighting the urgent need for stronger enforcement of dowry laws and protective measures for women.
 
-## 2. How many movies and shows fall in each decade in Netflix's library?
+- For Domestic Violence case 
 ```mysql
-SELECT CONCAT(FLOOR(release_year / 10) * 10, 's') AS decade,
-	COUNT(*) AS movies_shows_count
-FROM shows_movies.titles
-WHERE release_year >= 1940
-GROUP BY CONCAT(FLOOR(release_year / 10) * 10, 's')
-ORDER BY decade;
+select `STATE/UT`,
+sum(`Cruelty by Husband or his Relatives`) as Domestic_Violence_Case
+from women_crime
+group by `STATE/UT`
+order by  Domestic_Violence_Case desc
+limit 5; 
 ```
 Result: 
 
-![Q5](https://i.ibb.co/8dTzVZ3/Screen-Shot-2023-07-09-at-10-02-18-PM.png)
+![Q4](https://i.ibb.co/Y7Qjvg5/Screen-Shot-2023-07-09-at-9-49-36-PM.png)
 
-The results of the SQL query provide a fascinating insight into the distribution of movies and shows across different decades in Netflix's library. The data 
+West Bengal has the highest number of domestic violence cases (172,062), followed by Andhra Pradesh, Rajasthan, Uttar Pradesh, and Maharashtra between 2001 and 2014. These states face significant domestic violence issues, emphasizing the need for more robust support systems and legal protections for affected women.
 
-
-## 3. How did age-certifications impact the dataset?
+-  For the Importation of Girls case
 ```mysql
-SELECT DISTINCT age_certification, 
-ROUND(AVG(imdb_score),2) AS avg_imdb_score,
-ROUND(AVG(tmdb_score),2) AS avg_tmdb_score
-FROM shows_movies.titles
-GROUP BY age_certification
-ORDER BY avg_imdb_score DESC
+select `STATE/UT`,
+sum(`Importation of Girls`) as Total_Importation_Case
+from women_crime
+group by `STATE/UT`
+order by  Total_Importation_Case desc
+limit 5; 
 ```
 Result: 
 
-![Q6](https://i.ibb.co/SvJyjgF/Screen-Shot-2023-07-09-at-10-16-52-PM.png)
+![Q4](https://i.ibb.co/Y7Qjvg5/Screen-Shot-2023-07-09-at-9-49-36-PM.png)
 
-```mysql
-SELECT age_certification, 
-COUNT(*) AS certification_count
-FROM shows_movies.titles
-WHERE type = 'Movie' 
-AND age_certification != 'N/A'
-GROUP BY age_certification
-ORDER BY certification_count DESC
-LIMIT 5;
-```
-Results: 
+Bihar reports the highest number of cases of importation of girls (452), followed by Jharkhand, West Bengal, Madhya Pradesh, and Karnataka between 2001 and 2014. This highlights the prevalence of human trafficking in these states, especially Bihar, indicating a need for stronger measures to combat trafficking and protect vulnerable women and girls.
 
-![Q7](https://i.ibb.co/T0f5cNq/Screen-Shot-2023-07-09-at-10-20-23-PM.png)
-
-The first query focused on the average IMDB scores associated with each age certification, revealing interesting trends in audience ratings. According to the 
-
-
-## 4. Which genres are the most common? 
-- Top 10 most common genres for MOVIES
-```mysql
-SELECT genres, 
-COUNT(*) AS title_count
-FROM shows_movies.titles 
-WHERE type = 'Movie'
-GROUP BY genres
-ORDER BY title_count DESC
-LIMIT 10;
-```
-Result:
-
-![Q8](https://i.ibb.co/VWrgd8m/Screen-Shot-2023-07-10-at-12-25-40-PM.png)
-
-- Top 10 most common genres for SHOWS
-```mysql
-SELECT genres, 
-COUNT(*) AS title_count
-FROM shows_movies.titles 
-WHERE type = 'Show'
-GROUP BY genres
-ORDER BY title_count DESC
-LIMIT 10;
-```
-Result: 
-
-![Q9](https://i.ibb.co/P59s4X7/Screen-Shot-2023-07-10-at-12-27-41-PM.png)
-
-- Top 3 most common genres OVERALL
-```mysql
-SELECT t.genres, 
-COUNT(*) AS genre_count
-FROM shows_movies.titles AS t
-WHERE t.type = 'Movie' or t.type = 'Show'
-GROUP BY t.genres
-ORDER BY genre_count DESC
-LIMIT 3;
-```
-Result: 
-
-![Q10](https://i.ibb.co/qMvMBGf/Screen-Shot-2023-07-10-at-12-30-04-PM.png)
-
-By analyzing the frequency of genres, we can gain a better understanding of the content that dominates the platform and the preferences of its audience. Starting 
 ## Conclusion 
 By exploring various aspects of the dataset, a comprehensive understanding of Netflix's content landscape was gained. The analysis revealed the top 10 and bottom 10 movies and shows based on their IMDB scores, which highlighted the titles that garnered high praise and those that received lower ratings. This information can 
