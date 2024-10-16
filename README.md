@@ -1,4 +1,5 @@
 # <p align="center">Crime Against Women 2001-2014 (India)</p>
+This project provides a comprehensive analysis of crimes against women in India between 2001 and 2014. Using SQL for data manipulation and Power BI for visualization, the project creates an interactive report to help identify key trends, state-wise crime distribution, and year-over-year crime growth.
 
 **Tools Used:** Excel, MySQL, Tableau
 
@@ -9,10 +10,31 @@
 
 [Crime Against Women Report - PowerBI](https://github.com/tanu4419/Crime_Against_Women_2001-2014-India-/blob/main/Crime_Against_Women_Report_(Power_BI).png)
 
-- **Business Problem:** Netflix wants to gather useful insights on their shows and movies for their subscribers through their datasets. The issue is, they are 
+**Project Overview:**
 
-- **How I Plan On Solving the Problem:** In helping Netflix gather valuable insights from their extensive movies and shows dataset, I will be utilizing SQL and a d
+The project aims to highlight the trends and distribution of major crimes against women, such as:
+- Rape
+- Dowry Deaths
+- Domestic Violence
+  
+By using SQL for data extraction and Power BI for creating visualizations, this project sheds light on the states with the highest reported crimes, yearly trends, and distribution of crimes across different categories.
 
+**Data Sourcse:**
+
+The dataset used in this project includes information on reported crimes against women from 2001 to 2014 in India. It includes the following categories:
+- Rape Cases
+- Dowry Deaths
+- Domestic Violence
+- Kidnapping & Abduction
+- Assault on Women
+
+**Features:**
+- KPI Section: Highlights total reported cases for each crime category.
+- Bar Chart: Displays the top 5 states with the highest reported cases of each category.
+- Pie Chart: Shows the percentage breakdown of different crime categories.
+- Slicers: Interactive slicers for filtering the data by State and Year, enabling users to drill down into specific regions and time periods.
+
+  
 ## Questions I Wanted To Answer From the Dataset:
 
 ## 1. Create a Dataset containing the 10 highest reported rape cases in India, in the span of years 2001-2014.
