@@ -1,4 +1,4 @@
-# <p align="center">Crime Against Women 2001-2014 (India)</p>
+# <p align="center">Crime Against Women Analysis 2001-2014 (India)</p>
 This project provides a comprehensive analysis of crimes against women in India between 2001 and 2014. Using SQL for data manipulation and Power BI for visualization, the project creates an interactive report to help identify key trends, state-wise crime distribution, and year-over-year crime growth.
 
 **Tools Used:** Excel, MySQL, Tableau
@@ -205,7 +205,7 @@ limit 5;
 ```
 Result: 
 
-![Q6E](https://github.com/user-attachments/assets/08844040-00b7-40f6-b7c0-ff2a8f942673)
+![Q6LAST](https://github.com/user-attachments/assets/53b7f19b-fc3c-4e9b-8547-86d092a1f884)
 
 Bihar reports the highest number of cases of importation of girls (452), followed by Jharkhand, West Bengal, Madhya Pradesh, and Karnataka between 2001 and 2014. This highlights the prevalence of human trafficking in these states, especially Bihar, indicating a need for stronger measures to combat trafficking and protect vulnerable women and girls.
 
