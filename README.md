@@ -5,9 +5,9 @@
 [Datasets Used](https://www.kaggle.com/datasets/greeshmagirish/crime-against-women-20012014-india)
 
 
-[SQL Analysis (Code)](https://github.com/SharifAthar/Netflix-Shows-and-Movies-SQL/blob/main/Netflix_SQL_Analysis.sql)
+[SQL Analysis (Code)](https://github.com/tanu4419/Crime_Against_Women_2001-2014-India-/blob/main/Crime_Against_Women_SQL_Analysis.sql)
 
-[Netflix Dashboard - Tableau](https://public.tableau.com/app/profile/sharif.athar/viz/NetflixShowsMoviesDashboard/Dashboard1)
+[Crime Against Women Report - PowerBI](https://public.tableau.com/app/profile/sharif.athar/viz/NetflixShowsMoviesDashboard/Dashboard1)
 
 - **Business Problem:** Netflix wants to gather useful insights on their shows and movies for their subscribers through their datasets. The issue is, they are 
 
@@ -15,17 +15,14 @@
 
 ## Questions I Wanted To Answer From the Dataset:
 
-## 1. Which movies and shows on Netflix ranked in the top 10 and bottom 10 based on their IMDB scores?
-- Top 10 Movies
+## 1. Create a Dataset containing the 10 highest reported rape cases in India, in the span of years 2001-2014.
+- Top 10 Highest Rape Cases
 ```mysql
-SELECT title, 
-type, 
-imdb_score
-FROM shows_movies.titles
-WHERE imdb_score >= 8.0
-AND type = 'MOVIE'
-ORDER BY imdb_score DESC
-LIMIT 10
+select `STATE/UT`, Year, sum(Rape) as Total_Rape
+from women_crime
+group by `STATE/UT`, Year
+order by sum(Rape) desc
+limit 10;
 ```
 Result: 
 
