@@ -7,7 +7,7 @@
 
 [SQL Analysis (Code)](https://github.com/tanu4419/Crime_Against_Women_2001-2014-India-/blob/main/Crime_Against_Women_SQL_Analysis.sql)
 
-[Crime Against Women Report - PowerBI](https://public.tableau.com/app/profile/sharif.athar/viz/NetflixShowsMoviesDashboard/Dashboard1)
+[Crime Against Women Report - PowerBI](https://github.com/tanu4419/Crime_Against_Women_2001-2014-India-/blob/main/Crime_Against_Women_Report_(Power_BI).png)
 
 - **Business Problem:** Netflix wants to gather useful insights on their shows and movies for their subscribers through their datasets. The issue is, they are 
 
