@@ -208,4 +208,7 @@ Result:
 Bihar reports the highest number of cases of importation of girls (452), followed by Jharkhand, West Bengal, Madhya Pradesh, and Karnataka between 2001 and 2014. This highlights the prevalence of human trafficking in these states, especially Bihar, indicating a need for stronger measures to combat trafficking and protect vulnerable women and girls.
 
 ## Conclusion 
-By exploring various aspects of the dataset, a comprehensive understanding of Netflix's content landscape was gained. The analysis revealed the top 10 and bottom 10 movies and shows based on their IMDB scores, which highlighted the titles that garnered high praise and those that received lower ratings. This information can 
+This project highlights alarming trends in crimes against women in India from 2001 to 2014, revealing that states like Uttar Pradesh, Bihar, Madhya Pradesh, West Bengal, and Rajasthan report the highest cases of rape, dowry deaths, domestic violence, kidnapping, and importation of girls.
+These findings underscore the urgent need for targeted interventions, stronger legal protections, and enhanced support for victims. The overlap in states with high incidences of both rape and dowry deaths indicates the complex nature of gender-based violence.
+
+Overall, this analysis calls for a collective commitment from government, civil society, and communities to create a safer and more equitable environment for women in India.
