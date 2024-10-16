@@ -35,7 +35,7 @@ The dataset used in this project includes information on reported crimes against
 - Slicers: Interactive slicers for filtering the data by State and Year, enabling users to drill down into specific regions and time periods.
 
   
-## Questions I Wanted To Answer From the Dataset:
+## Insights I Gathered:
 
 ## 1. Create a Dataset containing the 10 highest reported rape cases in India, in the span of years 2001-2014.
 - Top 10 Highest Rape Cases
@@ -48,22 +48,21 @@ limit 10;
 ```
 Result: 
 
-![Q1](https://i.ibb.co/6mQWCw9/Screen-Shot-2023-07-09-at-9-38-11-PM.png)
+![Screenshot 2024-10-16 100945](https://github.com/user-attachments/assets/6b01aed2-ce87-4eb5-bbf8-2022c91f0772)
 
-- Top 10 Shows
+## 2. Create a Dataset containing the 10 highest reported deaths caused by Dowry cases in India, in the span of years 2001-2014.
+- Top 10 Highest Dowry Deaths Cases
 ```mysql
-SELECT title, 
-type, 
-imdb_score
-FROM shows_movies.titles
-WHERE imdb_score >= 8.0
-AND type = 'SHOW'
-ORDER BY imdb_score DESC
-LIMIT 10
+select `STATE/UT`, Year, sum(`Dowry Deaths`) as Total_Dowry_Death
+from women_crime
+group by `STATE/UT`, Year
+order by sum(`Dowry Deaths`) desc
+limit 10;
 ```
 Result: 
 
-![Q2](https://i.ibb.co/QppHsN2/Screen-Shot-2023-07-09-at-9-45-58-PM.png)
+![Screenshot 2024-10-16 100945](https://github.com/user-attachments/assets/6b01aed2-ce87-4eb5-bbf8-2022c91f0772)
+
 
 - Bottom 10 Movies
 ```mysql
