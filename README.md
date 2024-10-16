@@ -2,7 +2,7 @@
 
 **Tools Used:** Excel, MySQL, Tableau
 
-[Datasets Used](https://www.kaggle.com/datasets/victorsoeiro/netflix-tv-shows-and-movies?select=titles.csv)
+[Datasets Used](https://www.kaggle.com/datasets/greeshmagirish/crime-against-women-20012014-india)
 
 
 [SQL Analysis (Code)](https://github.com/SharifAthar/Netflix-Shows-and-Movies-SQL/blob/main/Netflix_SQL_Analysis.sql)
