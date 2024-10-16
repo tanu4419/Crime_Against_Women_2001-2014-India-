@@ -82,7 +82,7 @@ limit 10;
 ```
 Result: 
 
-![Q2](https://github.com/user-attachments/assets/d2ce1a2b-97d4-4646-bc5e-60ba27545aa2)
+![Q3](https://github.com/user-attachments/assets/1f1423a8-ae0f-4960-970d-16fec92608ac)
 
 West Bengal consistently reported the highest number of domestic violence cases between 2001 and 2014, indicating a significant prevalence of this issue within the state.
 Rajasthan and Andhra Pradesh also reported relatively high numbers of domestic violence cases.
@@ -99,7 +99,7 @@ limit 10;
 ```
 Result: 
 
-![Q2](https://github.com/user-attachments/assets/d2ce1a2b-97d4-4646-bc5e-60ba27545aa2)
+![Q4](https://github.com/user-attachments/assets/4903a8e4-ebab-49f2-8e03-86f29bdf6193)
 
 Bihar reported the highest number of reported cases of importation of girls between 2001 and 2014, followed by West Bengal and Jharkhand. This indicates a significant prevalence of this issue in these states.
 
@@ -120,7 +120,9 @@ Assault_Case,Total_Kidnapping_Abduction_Case desc;
 ```
 Result: 
 
-![Q2](https://github.com/user-attachments/assets/d2ce1a2b-97d4-4646-bc5e-60ba27545aa2)
+![Q5A](https://github.com/user-attachments/assets/fcd0bdd1-864e-442a-875f-18277f987b07)
+
+![Q5B](https://github.com/user-attachments/assets/c3ca2619-8a1a-474f-9b05-db2fd238e27c)
 
 Uttar Pradesh reported the highest number of cases across all categories.
 Madhya Pradesh and West Bengal also reported high numbers of cases in most categories.
@@ -143,7 +145,7 @@ limit 5;
 ```
 Result: 
 
-![Q2](https://github.com/user-attachments/assets/d2ce1a2b-97d4-4646-bc5e-60ba27545aa2)
+![Q6A](https://github.com/user-attachments/assets/1d7e57b0-0562-48b1-b937-ebbd1e61a0a5)
 
 Madhya Pradesh has the highest number of reported rape cases (45,498), followed by Uttar Pradesh, Maharashtra, West Bengal, and Rajasthan. This shows that these states have a higher incidence of reported rape cases and may need stronger measures to improve women's safety.
 
@@ -158,7 +160,7 @@ limit 5;
 ```
 Result: 
 
-![Q3](https://i.ibb.co/tMXV1yp/Screen-Shot-2023-07-09-at-9-47-24-PM.png)
+![Q6B](https://github.com/user-attachments/assets/3f8df8bd-b48a-472c-917f-af509dcd82cf)
 
 Uttar Pradesh has the highest number of reported kidnapping and abduction cases (67,953), followed by Rajasthan, Assam, West Bengal, and Bihar between 2001 and 2014. This indicates that these states face significant issues related to kidnapping and abduction, which may require focused efforts to improve law enforcement and public safety measures.
 
@@ -173,7 +175,7 @@ limit 5;
 ```
 Result: 
 
-![Q4](https://i.ibb.co/Y7Qjvg5/Screen-Shot-2023-07-09-at-9-49-36-PM.png)
+![Q6C](https://github.com/user-attachments/assets/0ad0a0eb-9012-445a-8ac6-b5b5c3584131)
 
 Uttar Pradesh reports the highest number of dowry deaths (28,628), followed by Bihar, Madhya Pradesh, Andhra Pradesh, and West Bengal between 2001 and 2014. These states show a severe issue with dowry-related violence, highlighting the urgent need for stronger enforcement of dowry laws and protective measures for women.
 
@@ -188,7 +190,7 @@ limit 5;
 ```
 Result: 
 
-![Q4](https://i.ibb.co/Y7Qjvg5/Screen-Shot-2023-07-09-at-9-49-36-PM.png)
+![Q6D](https://github.com/user-attachments/assets/6aa1fa74-06b7-4038-b9dd-c6ecb3dd51bb)
 
 West Bengal has the highest number of domestic violence cases (172,062), followed by Andhra Pradesh, Rajasthan, Uttar Pradesh, and Maharashtra between 2001 and 2014. These states face significant domestic violence issues, emphasizing the need for more robust support systems and legal protections for affected women.
 
@@ -203,7 +205,7 @@ limit 5;
 ```
 Result: 
 
-![Q4](https://i.ibb.co/Y7Qjvg5/Screen-Shot-2023-07-09-at-9-49-36-PM.png)
+![Q6E](https://github.com/user-attachments/assets/08844040-00b7-40f6-b7c0-ff2a8f942673)
 
 Bihar reports the highest number of cases of importation of girls (452), followed by Jharkhand, West Bengal, Madhya Pradesh, and Karnataka between 2001 and 2014. This highlights the prevalence of human trafficking in these states, especially Bihar, indicating a need for stronger measures to combat trafficking and protect vulnerable women and girls.
 
