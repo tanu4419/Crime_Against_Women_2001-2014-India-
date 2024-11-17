@@ -1,7 +1,7 @@
 # <p align="center">Crime Against Women Analysis 2001-2014 (India)</p>
 This project provides a comprehensive analysis of crimes against women in India between 2001 and 2014. Using SQL for data manipulation and Power BI for visualization, the project creates an interactive report to help identify key trends, state-wise crime distribution, and year-over-year crime growth.
 
-**Tools Used:** Excel, MySQL, Tableau
+**Tools Used:** Excel, MySQL, Power BI
 
 [Datasets Used](https://www.kaggle.com/datasets/greeshmagirish/crime-against-women-20012014-india)
 
